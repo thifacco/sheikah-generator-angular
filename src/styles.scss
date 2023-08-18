@@ -1,32 +1,94 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$sheikah-generator-angular-primary: mat.define-palette(mat.$indigo-palette);
+$sheikah-generator-angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$sheikah-generator-angular-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$sheikah-generator-angular-theme: mat.define-light-theme((
+  color: (
+    primary: $sheikah-generator-angular-primary,
+    accent: $sheikah-generator-angular-accent,
+    warn: $sheikah-generator-angular-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($sheikah-generator-angular-theme);
+
 /* You can add global styles to this file, and also import other style files */
 @import url('assets/fonts/botw-hylian/stylesheet.css');
 
-body {}
-
-h2, h3, h4 {
-   margin-bottom: 0;
+html,
+body {
+  height: 100%;
 }
 
-.content {
-   .form {
-      max-width: 250px;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-      input {
-         display: block;
-         width: 100%;
+h2,
+h3,
+h4 {
+  margin-bottom: unset;
+}
+
+.main {
+  .content {
+    padding: 30px 16px;
+
+    .header {
+      .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        margin: 15px auto;
+
+        h1,
+        p {
+          text-align: center;
+        }
+
+        h1 {
+          margin-bottom: unset;
+        }
       }
-   }
-}
+    }
 
-.sheikah-transform {
-  font-family: 'botw_hylianregular';
-  letter-spacing: .25rem;
+    .translate {
+      .sheikah-transform {
+        font-family: 'botw_hylianregular';
+        letter-spacing: .25rem;
 
-  &.uppercase {
-    text-transform: uppercase;
-  }
+        &.uppercase {
+          text-transform: uppercase;
+        }
 
-  &.lowercase {
-    text-transform: lowercase;
+        &.lowercase {
+          text-transform: lowercase;
+        }
+      }
+    }
   }
 }

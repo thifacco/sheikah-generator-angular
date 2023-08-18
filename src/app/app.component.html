@@ -1,22 +1,28 @@
-<main>
-   <header>
-      <h1>Sheikah Generator</h1>
-   </header>
+<div class="main">
    <div class="content">
-      <div class="form">
-         <input type="text" [(ngModel)]="sheikahNameGenerated" placeholder="Ex: sheikah generator">
-         <small>nome a ser traduzido para Sheikah Language</small>
+      <div class="header">
+         <div class="headline">
+            <h1>Sheikah Generator</h1>
+            <p>Tradutor de palavras para a linguagem Sheikah de Legend Of Zelda</p>
+            <a href="https://github.com/thifacco/sheikah-generator-angular" target="_blank" title="Repositório sheikah-generator-angular no GitHub @thifacco">
+               <img src="https://img.shields.io/github/followers/thifacco.svg?style=social&label=Follow&maxAge=2592000">
+            </a>
+         </div>
       </div>
-      <div class="text-transform" *ngIf="sheikahNameGenerated?.length">
+      <div class="form">
+         <mat-form-field appearance="outline">
+            <mat-label>Digite o texto a ser traduzido para Sheikah Language</mat-label>
+            <input type="text" matInput placeholder="Ex: hyrule, link, zelda ..." [(ngModel)]="sheikahNameGenerated">
+            <mat-icon matSuffix>search</mat-icon>
+         </mat-form-field>
+      </div>
+      <div class="translate" *ngIf="sheikahNameGenerated?.length">
          <h4>uppercase:</h4>
          <p class="sheikah-transform uppercase">{{ sheikahNameGenerated }}</p>
          <h4>lowercase:</h4>
          <p class="sheikah-transform lowercase">{{ sheikahNameGenerated }}</p>
-         <div class="user-action">
-            <button>Download .jpg</button>
-         </div>
       </div>
    </div>
-</main>
+</div>
 
 
