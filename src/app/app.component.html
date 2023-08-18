@@ -7,11 +7,14 @@
          <input type="text" [(ngModel)]="sheikahNameGenerated" placeholder="Ex: sheikah generator">
          <small>nome a ser traduzido para Sheikah Language</small>
       </div>
-      <div class="text-transform">
+      <div class="text-transform" *ngIf="sheikahNameGenerated?.length">
          <h4>uppercase:</h4>
          <p class="sheikah-transform uppercase">{{ sheikahNameGenerated }}</p>
          <h4>lowercase:</h4>
          <p class="sheikah-transform lowercase">{{ sheikahNameGenerated }}</p>
+         <div class="user-action">
+            <button>Download .jpg</button>
+         </div>
       </div>
    </div>
 </main>
