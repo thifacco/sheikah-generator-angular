@@ -1,3 +1,19 @@
-<input type="text" [(ngModel)]="sheikahNameGenerated">
-<p class="sheikah-transform uppercase">{{ sheikahNameGenerated }}</p>
-<p class="sheikah-transform lowercase">{{ sheikahNameGenerated }}</p>
+<main>
+   <header>
+      <h1>Sheikah Generator</h1>
+   </header>
+   <div class="content">
+      <div class="form">
+         <input type="text" [(ngModel)]="sheikahNameGenerated" placeholder="Ex: sheikah generator">
+         <small>nome a ser traduzido para Sheikah Language</small>
+      </div>
+      <div class="text-transform">
+         <h4>uppercase:</h4>
+         <p class="sheikah-transform uppercase">{{ sheikahNameGenerated }}</p>
+         <h4>lowercase:</h4>
+         <p class="sheikah-transform lowercase">{{ sheikahNameGenerated }}</p>
+      </div>
+   </div>
+</main>
+
+
