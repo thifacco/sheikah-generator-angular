@@ -11,9 +11,9 @@
       </div>
       <div class="form">
          <mat-form-field appearance="outline">
-            <!-- <mat-label>Digite o texto a ser traduzido para Sheikah Language</mat-label> -->
+            <mat-label>Traduzir para Sheikah Language</mat-label>
             <input type="text" matInput placeholder="Ex: hyrule, link, zelda ..." [(ngModel)]="sheikahNameGenerated">
-            <mat-icon matSuffix>search</mat-icon>
+            <mat-icon matSuffix>translate</mat-icon>
          </mat-form-field>
       </div>
       <div class="translate" *ngIf="sheikahNameGenerated?.length">
