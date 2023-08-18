@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('assets/fonts/botw-hylian/stylesheet.css');
 
-body {
-   font-family: 'botw_hylianregular';
-   text-transform: uppercase;
+body {}
+
+.sheikah-transform {
+  font-family: 'botw_hylianregular';
+  letter-spacing: .25rem;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.lowercase {
+    text-transform: lowercase;
+  }
 }
