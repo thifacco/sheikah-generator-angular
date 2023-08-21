@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use '@angular/material'as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -20,13 +19,10 @@ $sheikah-generator-angular-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$sheikah-generator-angular-theme: mat.define-light-theme((
-  color: (
-    primary: $sheikah-generator-angular-primary,
-    accent: $sheikah-generator-angular-accent,
-    warn: $sheikah-generator-angular-warn,
-  )
-));
+$sheikah-generator-angular-theme: mat.define-light-theme((color: (primary: $sheikah-generator-angular-primary,
+      accent: $sheikah-generator-angular-accent,
+      warn: $sheikah-generator-angular-warn,
+    )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -56,6 +52,12 @@ h4 {
   .content {
     padding: 30px 16px;
 
+    @media (min-width: 540px) {
+      width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .header {
       margin-bottom: 60px;
 
@@ -80,7 +82,7 @@ h4 {
 
     .form {
       mat-form-field {
-         width: 100%;
+        width: 100%;
       }
     }
 
