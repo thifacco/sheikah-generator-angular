@@ -4,6 +4,10 @@ Aplicação desenvolvida com [Angular CLI](https://github.com/angular/angular-cl
 
 Link da aplicação no Netlify: https://sheikah-generator.netlify.app/
 
+## Features
+
+Traduz qualquer texto para a simbologia da linguagem Sheikah de Legend Of Zelda.
+
 ## Iniciar a aplicação
 ```
 npm start
